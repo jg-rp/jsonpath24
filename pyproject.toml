@@ -25,14 +25,14 @@ description = 'JSONPath for Python.'
 dynamic = ["version"]
 keywords = []
 license = "MIT"
-name = "pyjsonpath"
+name = "jsonpath11"
 readme = "README.md"
 requires-python = ">=3.8"
 
 [project.urls]
-Documentation = "https://jg-rp.github.io/pyjsonpath/"
-Issues = "https://github.com/jg-rp/pyjsonpath/issues"
-Source = "https://github.com/jg-rp/pyjsonpath"
+Documentation = "https://jg-rp.github.io/jsonpath11/"
+Issues = "https://github.com/jg-rp/jsonpath11/issues"
+Source = "https://github.com/jg-rp/jsonpath11"
 
 [tool.hatch.version]
 path = "jsonpath/__about__.py"
