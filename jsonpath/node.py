@@ -18,11 +18,9 @@ class JSONPathNode:
         self,
         value: object,
         location: List[Union[str, int]],
-        root: object,
     ) -> None:
         self.value = value
         self.location = location
-        self.root = root
 
     def path(self) -> str:
         """The canonical string representation of the path to this node."""
