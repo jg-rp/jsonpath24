@@ -19,7 +19,8 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
-  "libjsonpath@git+https://github.com/jg-rp/python-libjsonpath.git"
+  # "libjsonpath@file:///home/james/projects/python-libjsonpath/dist/libjsonpath-0.1.18-cp39-cp39-linux_x86_64.whl",
+  "libjsonpath@git+https://github.com/jg-rp/python-libjsonpath.git",
 ]
 description = 'JSONPath for Python.'
 dynamic = ["version"]

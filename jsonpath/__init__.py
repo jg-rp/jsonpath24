@@ -1,15 +1,17 @@
-from .env import JSONPathEnvironment
-from .functions import FilterFunction
-from .functions import FilterFunctionExpressionType
+from libjsonpath import FilterFunction  # noqa: I001
+from libjsonpath import ExpressionType
+from libjsonpath import NOTHING
 from .node import JSONPathNode
 from .node import JSONPathNodeList
+from .env import JSONPathEnvironment
 
 __all__ = (
     "FilterFunction",
-    "FilterFunctionExpressionType",
+    "ExpressionType",
     "JSONPathEnvironment",
     "JSONPathNode",
     "JSONPathNodeList",
+    "NOTHING",
 )
 
 

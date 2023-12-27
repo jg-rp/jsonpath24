@@ -11,13 +11,13 @@ from typing import Sequence
 from typing import Union
 
 import libjsonpath
+from libjsonpath import NOTHING
+from libjsonpath import ExpressionType
+from libjsonpath import FilterFunction
 
 if TYPE_CHECKING:
     from .env import JSONPathEnvironment
 
-from .functions import FilterFunction
-from .functions import FilterFunctionExpressionType
-from .functions.nothing import NOTHING  # XXX: move me
 from .node import JSONPathNode
 from .node import JSONPathNodeList
 
@@ -510,11 +510,11 @@ def _lt(left: object, right: object) -> bool:
     return False
 
 
-def _unpack_node_lists(func: FilterFunction, args: List[object]) -> List[object]:
+def _unpack_node_lists(func: "FilterFunction", args: List[object]) -> List[object]:
     return [
         arg.values_or_singular()
         if isinstance(arg, JSONPathNodeList)
-        and func.arg_types[i] != FilterFunctionExpressionType.NODES
+        and func.arg_types[i] != ExpressionType.nodes
         else arg
         for i, arg in enumerate(args)
     ]
